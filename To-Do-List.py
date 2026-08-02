@@ -4,7 +4,7 @@ todo_task=[]
 def add_task():             #Function to ADD TASkS
     task=input("Enter a Task: ")
     todo_task.append({"Task": task, "Status": "Pending"})
-    print("Task Added Successfully ")
+    print("\n Task Added Successfully ")
     print("\n")
 
 def view_task():            #Function to View TAsks
@@ -24,7 +24,7 @@ def remove_task():
 
     else:
         try:
-            search=int(input("Enter the task number you want to delete: "))-1
+            search=int(input("Enter the task number you want to remove: "))-1
             if 0<=search<len(todo_task):
                 removed_task=todo_task.pop(search)
                 print(f"\nTask removed : {removed_task["Task"]}")
@@ -35,7 +35,22 @@ def remove_task():
     print("\n")
 
 
-
+def mark_done_task():
+    if len(todo_task)==0:
+        print("List is empty...")
+        print("\n")
+        
+    else:
+        try:
+            search=int(input("Enter the task number you want to mark as done: "))-1
+            if 0<=search<len(todo_task):
+                todo_task[search]['Status']='Done'
+                print(f"\nTask {todo_task[search]['Task']} has been marked as done ")
+            else:
+                print("Invalid Task Number \n")
+        except ValueError:
+                print("Please Enter a Valid Task Number. ")
+    print("\n")
     
     
 
@@ -56,19 +71,22 @@ while True:
     
     display_menu()
     choice=int(input("Choose what task you want to perform (1-5): "))
-    if choice==1:
-        add_task()
-    elif choice==2:
-        view_task()
-    elif choice==3:
-        remove_task()
-    elif choice==4:
-        mark_done_task()
-    elif choice==5:
-        print("Program Exited!")
-        break
-    else:
-        print("Invalid Input ")
+    try:
+        if choice==1:
+            add_task()
+        elif choice==2:
+            view_task()
+        elif choice==3:
+            remove_task()
+        elif choice==4:
+            mark_done_task()
+        elif choice==5:
+            print("Program Exited!")
+            break
+        else:
+            print("Invalid Input ")
+    except ValueError:
+        print("Please Enter Valid number 1-5")
 
 
 
