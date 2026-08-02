@@ -17,7 +17,27 @@ def view_task():            #Function to View TAsks
             print(f"{index}: {task['Task']} - {task['Status']}")
     print("\n")
 
+def remove_task():
+    if len(todo_task)==0:
+        print("List is Empty...")
+        print("\n")
 
+    else:
+        try:
+            search=int(input("Enter the task number you want to delete: "))-1
+            if 0<=search<len(todo_task):
+                removed_task=todo_task.pop(search)
+                print(f"\nTask removed : {removed_task["Task"]}")
+            else:
+                print("Invalid Task Number")
+        except ValueError:
+            print("Please Enter a Valid Task Number. ")
+    print("\n")
+
+
+
+    
+    
 
 
 
