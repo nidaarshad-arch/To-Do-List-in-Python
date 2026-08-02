@@ -1,5 +1,4 @@
-#empty list
-todo_task=[]
+todo_task=[]                #empty list
 
 def add_task():             #Function to ADD TASkS
     task=input("Enter a Task: ")
@@ -17,7 +16,7 @@ def view_task():            #Function to View TAsks
             print(f"{index}: {task['Task']} - {task['Status']}")
     print("\n")
 
-def remove_task():
+def remove_task():          #Functions to Remove Tasks
     if len(todo_task)==0:
         print("List is Empty...")
         print("\n")
@@ -35,7 +34,7 @@ def remove_task():
     print("\n")
 
 
-def mark_done_task():
+def mark_done_task():           #Function to mark Tasks as done
     if len(todo_task)==0:
         print("List is empty...")
         print("\n")
@@ -58,7 +57,7 @@ def mark_done_task():
 
 def display_menu():
 
-    print("====== TO-DO-LIST ======")
+    print("====== MENU FOR TO-DO-LIST ======")
 
 
     print("1. Add Task ")
