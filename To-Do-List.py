@@ -26,7 +26,7 @@ def remove_task():          #Functions to Remove Tasks
             search=int(input("Enter the task number you want to remove: "))-1
             if 0<=search<len(todo_task):
                 removed_task=todo_task.pop(search)
-                print(f"\nTask removed : {removed_task["Task"]}")
+                print(f"\nTask removed : {removed_task['Task']}")
             else:
                 print("Invalid Task Number")
         except ValueError:
@@ -69,24 +69,26 @@ def display_menu():
 while True:
     
     display_menu()
-    choice=int(input("Choose what task you want to perform (1-5): "))
     try:
-        if choice==1:
-            add_task()
-        elif choice==2:
-            view_task()
-        elif choice==3:
-            remove_task()
-        elif choice==4:
-            mark_done_task()
-        elif choice==5:
-            print("Program Exited!")
-            break
-        else:
-            print("Invalid Input ")
+        choice = int(input("Choose what task you want to perform (1-5): "))
     except ValueError:
-        print("Please Enter Valid number 1-5")
-
+        print("Please enter a valid number.\n")
+        continue
+    
+    if choice==1:
+        add_task()
+    elif choice==2:
+        view_task()
+    elif choice==3:
+        remove_task()
+    elif choice==4:
+        mark_done_task()
+    elif choice==5:
+        print("Program Exited!")
+        break
+    else:
+        print("Invalid Input ")
+    
 
 
 
