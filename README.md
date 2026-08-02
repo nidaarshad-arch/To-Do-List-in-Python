@@ -1,29 +1,29 @@
-# 📝 To-Do List Application (Python)
+#  To-Do List Application (Python)
 
 A simple command-line **To-Do List Application** built with Python that helps users manage their daily tasks. Users can add, view, remove, and mark tasks as completed. All tasks are automatically saved in a JSON file, so they remain available even after closing the program.
 
 ---
 
-## 📌 Features
+##  Features
 
-* ➕ Add new tasks
-* 📋 View all tasks
-* ❌ Remove tasks
-* ✅ Mark tasks as completed
-* 💾 Automatically save tasks using a JSON file
-* 🔄 Load saved tasks when the program starts
-* 🛡️ Handles invalid inputs using exception handling
+*  Add new tasks
+*  View all tasks
+*  Remove tasks
+*  Mark tasks as completed
+*  Automatically save tasks using a JSON file
+*  Load saved tasks when the program starts
+*  Handles invalid inputs using exception handling
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * Python 3
 * JSON (for data storage)
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 To-Do-List-in-Python/
@@ -34,7 +34,7 @@ To-Do-List-in-Python/
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
 1. Clone the repository:
 
@@ -52,7 +52,7 @@ python To-Do-List.py
 
 ---
 
-## 📖 How It Works
+##  How It Works
 
 When you start the program, you'll see the following menu:
 
@@ -101,7 +101,7 @@ The application automatically:
 
 ---
 
-## 🧠 Python Concepts Used
+##  Python Concepts Used
 
 * Functions
 * Lists
@@ -116,21 +116,21 @@ The application automatically:
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 Some features that can be added in future versions:
 
-* ✏️ Edit existing tasks
-* 🔍 Search for a task
-* 📅 Add due dates
-* ⭐ Set task priorities
-* 🗂️ Filter completed and pending tasks
-* 🗑️ Delete all completed tasks
-* 🎨 Build a graphical interface using Tkinter or CustomTkinter
+*  Edit existing tasks
+*  Search for a task
+*  Add due dates
+*  Set task priorities
+*  Filter completed and pending tasks
+*  Delete all completed tasks
+*  Build a graphical interface using Tkinter or CustomTkinter
 
 ---
 
-## 📷 Sample Output
+##  Sample Output
 
 ```text
 ====== MENU FOR TO-DO-LIST ======
@@ -151,7 +151,7 @@ Choose what task you want to perform (1-5): 2
 
 ---
 
-## 🎯 Learning Objectives
+##  Learning Objectives
 
 This project was built to practice:
 
@@ -163,7 +163,7 @@ This project was built to practice:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Nida Arshad**
 
