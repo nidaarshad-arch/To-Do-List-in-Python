@@ -1,8 +1,22 @@
-todo_task=[]                #empty list
+import json
+todo_task=[]                #global empty list
+
+def save_task():
+    with open("tasks.json", "w") as file:
+        json.dump(todo_task,file,indent=4)
+
+def load_task():
+    global todo_task
+    try:
+        with open("tasks.json", "r") as file:
+            todo_task = json.load(file)
+    except FileNotFoundError:
+        todo_task=[]
 
 def add_task():             #Function to ADD TASkS
     task=input("Enter a Task: ")
     todo_task.append({"Task": task, "Status": "Pending"})
+    save_task()            # ADD task to JSON file
     print("\n Task Added Successfully ")
     print("\n")
 
@@ -26,6 +40,7 @@ def remove_task():          #Functions to Remove Tasks
             search=int(input("Enter the task number you want to remove: "))-1
             if 0<=search<len(todo_task):
                 removed_task=todo_task.pop(search)
+                save_task()                              #Remove the task from JSON file
                 print(f"\nTask removed : {removed_task['Task']}")
             else:
                 print("Invalid Task Number")
@@ -44,6 +59,7 @@ def mark_done_task():           #Function to mark Tasks as done
             search=int(input("Enter the task number you want to mark as done: "))-1
             if 0<=search<len(todo_task):
                 todo_task[search]['Status']='Done'
+                save_task()
                 print(f"\nTask {todo_task[search]['Task']} has been marked as done ")
             else:
                 print("Invalid Task Number \n")
@@ -65,6 +81,8 @@ def display_menu():
     print("3. Remove Task ")
     print("4. Mark the Task as Done")
     print("5. Exit")
+
+load_task()             #Calls Load_Task() to load tasks from JSON Files
 
 while True:
     
